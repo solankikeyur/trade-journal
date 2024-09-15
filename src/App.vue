@@ -1,11 +1,9 @@
 <template>
-  <Sidebar></Sidebar>
+  <RouterView></RouterView>
 </template>
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
-
-import Sidebar from "./components/Common/Sidebar/Sidebar.vue";
 
 // initialize components based on data attribute selectors
 onMounted(() => {
