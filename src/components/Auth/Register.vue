@@ -15,20 +15,34 @@
           </h1>
           <form class="space-y-4 md:space-y-6" @submit.prevent="handleRegister">
             <div>
-              <Label for="email" >Email</Label>
-              <Input type="email" name="email" id="email" placeholder="Email Address" v-model="formData.email" />
+              <Label for="email">Email</Label>
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                v-model="formData.email"
+              />
             </div>
             <div>
-              <Label for="username" >Username</Label>
-              <Input type="text" name="username" id="username" placeholder="Username" v-model="formData.username" />
+              <Label for="password">Password</Label>
+              <Input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="••••••••"
+                v-model="formData.password"
+              />
             </div>
             <div>
-              <Label for="password" >Password</Label>
-              <Input type="password" name="password" id="password" placeholder="••••••••" v-model="formData.password" />
-            </div>
-            <div>
-              <Label for="confirm-password" >Confirm password</Label>
-              <Input type="password" name="confirm-password" id="confirm-password" placeholder="••••••••" v-model="formData.confirmPassword" />
+              <Label for="confirm-password">Confirm password</Label>
+              <Input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                placeholder="••••••••"
+                v-model="formData.confirmPassword"
+              />
             </div>
             <div class="flex items-start">
               <div class="flex items-center h-5">
@@ -75,7 +89,7 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import Logo from '../Common/Logo.vue';
+import Logo from "../Common/Logo.vue";
 import Input from "../Common/Inputs/Input.vue";
 import Label from "../Common/Inputs/Label.vue";
 
@@ -84,7 +98,7 @@ const formData = ref({
   username: "",
   password: "",
   confirmPassword: "",
-  confirmTerms: false
+  confirmTerms: false,
 });
 
 const handleRegister = () => {
